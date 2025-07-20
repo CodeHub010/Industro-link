@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order - TechForge Automation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #f46530;
+      text-align: center;
+    }
+
+    img.logo {
+      display: block;
+      margin: 0 auto 1rem;
+      width: 80px;
+      height: 80px;
+    }
+
+    p.description {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #f46530;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d7501a;
+    }
+
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      text-decoration: none;
+      color: #f46530;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TechForge Automation</h1>
+</header>
+
+<div class="container">
+  <img src="https://cdn-icons-png.flaticon.com/512/7475/7475802.png" alt="TechForge Logo" class="logo" />
+  <h2>Place Your Order</h2>
+  <p class="description">
+    TechForge specializes in industrial automation, PLC integration, and control systems. Fill out the form below to place an order or request a custom solution.
+  </p>
+
+  <form onsubmit="submitOrder(event)">
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="tel" placeholder="Phone Number" required />
+    <select required>
+      <option value="" disabled selected>Select Product Type</option>
+      <option value="PLC Controller">PLC Controller</option>
+      <option value="HMI Panels">HMI Panels</option>
+      <option value="Sensors">Sensors</option>
+      <option value="Custom Automation Solution">Custom Automation Solution</option>
+    </select>
+    <input type="number" placeholder="Quantity" min="1" required />
+    <textarea rows="4" placeholder="Additional Message or Specifications"></textarea>
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+</div>
+
+<script>
+  function submitOrder(e) {
+    e.preventDefault();
+    alert('Thank you! Your order request has been received. We’ll get in touch with you shortly.');
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>

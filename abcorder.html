@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order - ACB Manufacturing | Industro Link</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    .content {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    button {
+      background-color: #f46530;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+    button:hover {
+      background-color: #d7501a;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #f46530;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Industro Link</div>
+    <nav><a href="index.html">Home</a></nav>
+  </header>
+
+  <div class="content">
+    <h1>Order – ACB Manufacturing</h1>
+    <p>Place your order for customized ACB panels, switchgears, or components directly below.</p>
+
+    <form onsubmit="handleSubmit(event)">
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Product Type</label>
+      <select required>
+        <option value="">Select</option>
+        <option value="ACB Panel">ACB Panel</option>
+        <option value="Switchgear">Switchgear</option>
+        <option value="Control Box">Control Box</option>
+      </select>
+
+      <label>Quantity</label>
+      <input type="number" min="1" required>
+
+      <label>Specifications / Notes</label>
+      <textarea rows="4" placeholder="Any specific configuration?"></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Order received! We'll reach out shortly.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
